@@ -49,10 +49,15 @@ const routes = [
     name: "addbook",
     component: BookUpdate,
   },
-   {
+  {
     path: "/updatebook/:id",
     name: "updatebook",
     component: BookUpdate,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "notfound",
+    component: () => import("@/views/NotFound.vue"),
   },
 ];
 
